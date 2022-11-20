@@ -11,64 +11,64 @@
     "logging",
     "plugin",
     "SRE",
-    "site reliability engineering",
-    "grafana loki"
+      "site reliability engineering",
+      "grafana loki"
   ],
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "build:proto": "./node_modules/.bin/pbjs -t static-module -w commonjs -o ./src/proto/index.js ./src/proto/logproto.proto && npm run lint:fix",
-    "test": "./node_modules/.bin/standard && ./node_modules/.bin/jest",
-    "lint": "./node_modules/.bin/eslint *",
-    "lint:fix": "./node_modules/.bin/standard --fix",
-    "coverage": "jest --coverage",
-    "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls"
-  },
-  "standard": {
-    "env": {
-      "node": true,
-      "jest": true
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "build:proto": "./node_modules/.bin/pbjs -t static-module -w commonjs -o ./src/proto/index.js ./src/proto/logproto.proto && npm run lint:fix",
+        "test": "./node_modules/.bin/standard && ./node_modules/.bin/jest",
+        "lint": "./node_modules/.bin/eslint *",
+        "lint:fix": "./node_modules/.bin/standard --fix",
+        "coverage": "jest --coverage",
+        "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls"
     },
-    "ignore": [
-      "test/coverage",
-      "src/proto/index.js"
-    ]
-  },
-  "jest": {
-    "coverageDirectory": "./test/coverage",
-    "coveragePathIgnorePatterns": [
-      "./node_modules/",
-      "./test/",
-      "./src/proto/index.js"
-    ]
-  },
-  "author": "Jani Anttonen",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JaniAnttonen/winston-loki.git"
-  },
-  "dependencies": {
-    "async-exit-hook": "2.0.1",
-    "btoa": "^1.2.1",
-    "protobufjs": "^6.8.8",
-    "winston-transport": "^4.3.0"
-  },
-  "optionalDependencies": {
-    "snappy": "7.1.1"
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.2",
-    "eslint": "^8.8.0",
-    "eslint-config-prettier": "^3.6.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^27.4.7",
-    "standard": "^16.0.4",
-    "winston": "^3.5.1"
-  }
+    "standard": {
+        "env": {
+            "node": true,
+            "jest": true
+        },
+        "ignore": [
+            "test/coverage",
+            "src/proto/index.js"
+        ]
+    },
+    "jest": {
+        "coverageDirectory": "./test/coverage",
+        "coveragePathIgnorePatterns": [
+            "./node_modules/",
+            "./test/",
+            "./src/proto/index.js"
+        ]
+    },
+    "author": "Jani Anttonen",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JaniAnttonen/winston-loki.git"
+    },
+    "dependencies": {
+        "async-exit-hook": "2.0.1",
+        "btoa": "^1.2.1",
+        "protobufjs": "^7.1.2",
+        "winston-transport": "^4.3.0"
+    },
+    "optionalDependencies": {
+        "snappy": "7.1.1"
+    },
+    "devDependencies": {
+        "coveralls": "^3.0.2",
+        "eslint": "^8.8.0",
+        "eslint-config-prettier": "^3.6.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "jest": "^27.4.7",
+        "standard": "^16.0.4",
+        "winston": "^3.8.2"
+    }
 }
